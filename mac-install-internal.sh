@@ -194,7 +194,7 @@ echo "Installing cached general packages"
 # chroot /arch pacman --noconfirm --needed -U /var/cache/pacman/general/package-quer*.pkg.tar.xz
 # chroot /arch pacman --noconfirm --needed -U /var/cache/pacman/general/*.pkg.tar.xz
 
-ls -1 /var/cache/pacman/general/*.pkg.tar.xz | tr '\n' ' ' | xargs -n 1 basename -s .pkg.tar.xz | tr '\n' ' ' | xargs chroot /arch pacman --noconfirm -Syyu
+chroot /arch pacman --noconfirm --needed -U /var/cache/pacman/general/*.pkg.tar.xz
 
 ###############################################################################
 # update after pushing packages from docker container to get the system 
