@@ -11,7 +11,7 @@
 ###############################################################################
 # Change this to your timezone
 ###############################################################################
-timedatectl set-timezone America/Los_Angeles
+timedatectl set-timezone Africa/Johannesburg
 
 ###############################################################################
 # Import any public keys that we need and initalize
@@ -27,14 +27,14 @@ pacman-key --lsign 962DDE58
 # Set the keyboard LEDs to light up
 # change this to 0 or your desired brightness level
 ###############################################################################
-echo "255" > /sys/class/leds/smc::kbd_backlight/brightness
+echo "0" > /sys/class/leds/smc::kbd_backlight/brightness
 
 ###############################################################################
 # Set this to your desired cpu power mode.
 ###############################################################################
 if hash cpupower 2> /dev/null; then
 # cpupower frequency-set -g performance
-cpupower frequency-set -g powersave
+cpupower frequency-set -g performance
 fi
 
 ###############################################################################

@@ -325,7 +325,7 @@ then
   echo "Downloading rootfs image"
   cd ~
   # curl -OL http://mirror.rackspace.com/archlinux/iso/2016.10.01/arch/x86_64/airootfs.sfs
-  curl -OL http://mirror.rackspace.com/archlinux/iso/2017.05.01/arch/x86_64/airootfs.sfs
+  curl -OL http://mirror.rackspace.com/archlinux/iso/2017.08.01/arch/x86_64/airootfs.sfs
 fi
 
 ###############################################################################
@@ -428,7 +428,7 @@ docker run \
   --rm \
   -ti \
   yantis/instant-archlinux-on-mac \
-  bash -c "run-remote-script https://raw.githubusercontent.com/yantis/instant-archlinux-on-mac/master/mac-install-internal.sh"
+  bash -c "run-remote-script https://raw.githubusercontent.com/chris-etheridge/instant-archlinux-on-mac/master/mac-install-internal.sh"
 
 # Flag that we did or did not have a successful install
 SUCCESSFUL_INSTALL=$?
