@@ -107,18 +107,7 @@ fi
 ###############################################################################
 # Install homebrew 
 ###############################################################################
-if ! hash brew 2> /dev/null; then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" </dev/null
-else
-  echo "Updating homebrew"
-  if !  brew update; then
-    echo "Homebrew Update Error. Fixing Permissions"
-    sudo chown -R $(whoami) /usr/local
-    echo "Attempting to fix and update homebrew"
-    brew uninstall --force brew-cask
-    brew update
-  fi
-fi
+
 
 ###############################################################################
 # Install wget to download Virtualbox
